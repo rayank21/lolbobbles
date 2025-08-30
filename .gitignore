@@ -1,0 +1,16 @@
+# Fichiers système
+.DS_Store
+Thumbs.db
+
+# Fichiers temporaires
+*.tmp
+*.log
+
+# Dossiers de build
+node_modules/
+dist/
+build/
+
+# Variables d'environnement
+.env
+.env.local
