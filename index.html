@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Générateur d'Équipes LoL</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Icônes des rôles (exemple avec Font Awesome) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+</head>
+<body>
+
+<div class="container">
+    <!-- PANNEAU DE GAUCHE : JOUEURS -->
+    <aside class="players-panel">
+        <h2><i class="fas fa-users"></i> Joueurs Disponibles</h2>
+        
+        <div class="player-form">
+            <input type="text" id="playerName" placeholder="Nom du joueur">
+            <select id="primaryRole">
+                <option value="top">TOP</option>
+                <option value="jungle">JGL</option>
+                <option value="mid">MID</option>
+                <option value="adc">ADC</option>
+                <option value="support">SUP</option>
+            </select>
+            <input type="number" id="playerLevel" min="1" max="5" value="3" title="Niveau (1-5)">
+            <button id="addPlayerBtn" class="btn-primary">Ajouter</button>
+        </div>
+        
+        <div id="player-list-container">
+            <p>Aucun joueur pour le moment.</p>
+        </div>
+    </aside>
+
+    <!-- ZONE CENTRALE : ÉQUIPES -->
+    <main class="teams-main">
+        <div id="teams-placeholder">
+            <h1>Générateur d'Équipes</h1>
+            <p>Ajoutez au moins 10 joueurs pour créer des équipes équilibrées.</p>
+            <button id="generateTeamsBtn" class="btn-generate" disabled>
+                <i class="fas fa-magic"></i> Trouver une partie
+            </button>
+        </div>
+        
+        <div id="teams-display" class="hidden">
+            <!-- Les équipes générées apparaîtront ici -->
+        </div>
+
+        <div id="share-section" class="hidden">
+             <button id="shareBtn" class="btn-secondary">🔗 Partager les équipes</button>
+        </div>
+    </main>
+</div>
+
+<script src="main.js"></script>
+</body>
+</html>
